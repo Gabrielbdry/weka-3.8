@@ -9,6 +9,7 @@ public class HelloWorldTest extends TestCase {
      */
     public void testHelloWorld() throws Exception {
         HelloWorld hw = new HelloWorld();
+        assertNotNull(hw.toString());
         assertEquals(hw.toString(), "Hello World!");
     }
 

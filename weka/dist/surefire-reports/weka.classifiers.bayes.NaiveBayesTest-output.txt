@@ -1,0 +1,2 @@
+Feb 06, 2019 10:47:33 AM com.github.fommil.jni.JniLoader liberalLoad
+INFO: successfully loaded /tmp/jniloader6780706156054577445netlib-native_system-linux-x86_64.so

@@ -1,3 +1,8 @@
 language: java
 install: true
+<<<<<<< HEAD
 script: ./mvnw clean install
+=======
+before_install: cd weka
+script: mvn clean install
+>>>>>>> 8b1a8cc2f718cf02b9c794eb32b5b7d1a423f10f

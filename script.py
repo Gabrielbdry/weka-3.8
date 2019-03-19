@@ -11,7 +11,7 @@ def doWork():
         q.task_done()
 
 def getStatus(ourl):
-    subprocess.call('curl -X POST "http://localhost:8081/algorithm/BayesNet" -H "accept: text/uri-list" -H "Content-Type: multipart/form-data" -F "estimator=SimpleEstimator" -F "estimatorParams=0.5" -F "searchAlgorithm=local.K2" -F "useADTree=" -F "validationNum=10" -F "searchParams=-P 1 -S BAYES" -F "datasetUri=" -F "validation=CrossValidation" -F "file=~/Documents/weka-3.8/contact-lenses.arff"', shell=True)
+    subprocess.call('curl -X POST "http://0.0.0.0:8081/algorithm/BayesNet" -H "accept: text/uri-list" -H "Content-Type: multipart/form-data" -F "estimator=SimpleEstimator" -F "estimatorParams=0.5" -F "searchAlgorithm=local.K2" -F "useADTree=" -F "validationNum=10" -F "searchParams=-P 1 -S BAYES" -F "datasetUri=" -F "validation=CrossValidation" -F "file=@dataset_100.arff"', shell=True)
 
 q = Queue(0)
 t = Thread(target=doWork)

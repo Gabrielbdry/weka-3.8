@@ -26,3 +26,14 @@ services:
       - 80:80
     links:
       - jguweka
+  monitoring:
+    image: google/cadvisor:latest
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:rw
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
+    ports:
+      - 8080:8080
+    depends_on:
+      - lb

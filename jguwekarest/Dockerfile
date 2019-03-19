@@ -1,7 +1,7 @@
 FROM tomcat:8.0-jre8
 MAINTAINER "M Rautenberg <rautenberg@uni-mainz.de>"
 
-# remove preinstalled webapps 
+# remove preinstalled webapps
 RUN rm -fr /usr/local/tomcat/webapps/ROOT
 RUN rm -fr /usr/local/tomcat/webapps/host-manager
 RUN rm -fr /usr/local/tomcat/webapps/manager

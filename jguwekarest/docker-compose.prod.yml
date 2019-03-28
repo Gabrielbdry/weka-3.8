@@ -2,9 +2,8 @@ version: '3'
 services:
   mongo:
     image: mongo
-    container_name: jguwekamongo
     restart: always
-  jguweka:
+  api:
     image: julienduf/jguwekarest:v1
     restart: always
     environment:
@@ -25,7 +24,7 @@ services:
     ports:
       - 80:80
     links:
-      - jguweka
+      - api
   monitoring:
     image: google/cadvisor:latest
     volumes:
